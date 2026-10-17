@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
-    "@oneconscious/shared": "*",
+    "@oneconscious/shared": "file:../packages/shared",
     "cors": "^2.8.5",
     "express": "^5.2.1",
     "helmet": "^8.0.0",
     "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17"
   }
 }

@@ -48,6 +48,8 @@ function describe(ev: ConsciousnessEvent): string {
     case 'ai_session':
       return `[${t}] ${ev.payload.role === 'user' ? 'said to' : 'from'} ${sanitizeUntrusted(ev.payload.tool, { maxLength: 40 })}: ` +
         `${sanitizeUntrusted(ev.payload.content, { maxLength: 160 })}`;
+    default:
+      return `[${t}] ${ev.type}`;
   }
 }
 
