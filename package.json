@@ -1,0 +1,21 @@
+{
+  "name": "@oneconscious/mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/server.js",
+  "bin": {
+    "oneconscious-mcp": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "npm run build --prefix packages/shared && npm run build --prefix packages/memory && tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@oneconscious/shared": "file:./packages/shared",
+    "@oneconscious/memory": "file:./packages/memory",
+    "zod": "^3.24.1"
+  }
+}
